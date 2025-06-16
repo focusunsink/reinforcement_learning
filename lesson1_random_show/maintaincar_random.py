@@ -8,11 +8,11 @@ done = False
 for _ in range(1000):
     action = env.action_space.sample()  # 随机动作：0,1,2
     if action == 0:
-        print("向左推")
+        print("push left")
     elif action == 1:
-        print("不动")
+        print("do nothing")
     else:
-        print("向右推")    
+        print("push right")    
     
     obs, reward, terminated, truncated, info = env.step(action)
     print(f"Observation: {obs}, Reward: {reward}, Terminated: {terminated}, Truncated: {truncated}")
